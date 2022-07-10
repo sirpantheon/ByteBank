@@ -8,5 +8,18 @@ namespace ByteBank{
         public int numero_agencia;
         public string nome_agencia;
         public double saldo;
+    public bool Sacar(double valor)
+    {
+        if (saldo < valor)
+        {
+            return false;
+        }
+        else
+        {
+            saldo = saldo - valor;
+            return true;
+        }
     }
+    }
+
 }
