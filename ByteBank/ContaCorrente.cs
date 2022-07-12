@@ -26,6 +26,7 @@ namespace ByteBank{
             return true;
         }
     }
+
     public void Depositar(double valor)
     {
             saldo = saldo + valor;
@@ -56,6 +57,15 @@ namespace ByteBank{
             Console.WriteLine("Número Agencia: " + numero_agencia);
             Console.WriteLine("Nome Agência: " + nome_agencia);
             Console.WriteLine("saldo: " + saldo);
+        }
+
+    public void DefinirSaldo(double valor)
+        {
+            if (valor < 0)
+            {
+                return;
+            }
+            saldo = valor;
         }
 
 
