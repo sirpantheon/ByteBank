@@ -34,7 +34,9 @@ conta3.conta = "654231987-xx";
 conta3.numero_agencia = 33;
 conta3.nome_agencia = "Banco Central";
 
-Console.WriteLine(conta3.titular.cpf);
+conta3.DefinirSaldo(800);
+
+Console.WriteLine(conta3.ObterSaldo());
 
 
 Console.ReadKey();
