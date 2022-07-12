@@ -8,8 +8,44 @@ namespace ByteBank.Titular
 {
     public class Cliente
     {
-        public string Nome { get; set; }
-        public string Cpf { get; set; }
+        public string Nome 
+        {
+            get
+            {
+                return Nome;
+            }
+
+            set
+            {
+                if (value.Length < 3)
+                {
+                    Console.WriteLine("Nome Invalido...");
+                }
+                else
+                {
+                    Nome = value;
+                }
+            }
+        }
+        public string Cpf 
+        {
+            get
+            {
+                return Cpf;
+            }
+
+            set
+            {
+                if (value.Length == 11)
+                {
+                    Console.WriteLine("Cpf Invalido...");
+                }
+                else
+                {
+                    Cpf = value;
+                }
+            }
+        }
         public string Profissao { get; set; }
 
     }

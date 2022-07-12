@@ -6,7 +6,7 @@ namespace ByteBank{
     public class ContaCorrente
     {
 
-        public Cliente titular { get; set; }
+        public Cliente Titular { get; set; }
 
         private string _conta;
         public string conta
@@ -113,10 +113,15 @@ namespace ByteBank{
             Console.WriteLine("saldo: " + _saldo);
         }
 
-        public ContaCorrente(int Numero_agencia, string Conta){
+        public ContaCorrente(int Numero_agencia, string Conta, Cliente titular)
+        {
             numero_agencia = Numero_agencia;
             conta = Conta;
+            Titular = titular;
+            TotalDeContasCriadas += 1;
         }
+
+        public static int TotalDeContasCriadas { get; set; }
 
 
     }
