@@ -9,7 +9,7 @@ namespace ByteBank{
         public string conta;
         public int numero_agencia;
         public string nome_agencia;
-        public double saldo;
+        private double saldo;
     public bool Sacar(double valor)
     {
         if (saldo < valor)
@@ -68,6 +68,11 @@ namespace ByteBank{
             saldo = valor;
         }
 
+
+    public double ObterSaldo()
+        {
+            return saldo;
+        }
 
     }
 
